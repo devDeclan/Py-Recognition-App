@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Py-Recognition</title>
+</head>
+<body
+	style="
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: black;
+		margin: 0;
+		padding: 0;
+		font-family: monospace;
+	"
+>
+	<div
+		style="
+			height: 400px;
+			width: 300px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			border-radius: 5px;
+			padding: 20px;
+			background-color: white;
+		"
+	>
+		<div
+			style="
+				text-align: center;
+			"
+		>
+			<h2
+				style="
+					text-decoration-line: underline;
+				"
+			>Py-Recognition</h2>
+			<p
+				style="
+				"
+			>Upload a video to run our human activity recognition model on it</p>
+		</div>
+		<div>
+			<form
+				enctype="multipart/form-data"
+				action=""
+				method="post"
+				style="
+					margin-bottom: 0
+				"
+			>
+		    {% csrf_token %}
+		    <input
+			    class="input"
+			    style="
+					  content: 'Select some files';
+					  display: inline-block;
+					  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+					  border: 1px solid #999;
+					  border-radius: 3px;
+					  padding: 8px 8px;
+					  outline: none;
+					  white-space: nowrap;
+					  -webkit-user-select: none;
+					  cursor: pointer;
+					  text-shadow: 1px 1px #fff;
+		    	"
+		    	type="file"
+		    	name="video"
+	    	>
+		    <input
+		    	style="
+		    		height: 40px;
+					  margin-top: 10px;
+		    		border-radius: 5px;
+		    		background-color: black;
+		    		box-shadow: 1px 1px rgba(0, 0, 0, 0.5) 2px 2px rgba(0, 0, 0, 0.7) ;
+		    		border-width: 0;
+		    		color: white;
+		    		width: 100%;
+	    		"
+		    	type="submit"
+		    	value="Upload"
+	    	>
+			</form>
+			<div
+				style="
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				"
+			>
+				<div
+					style="
+						color: gray;
+						border-style: inset;
+						border-width: 1px;
+						margin-left: 0.5em;
+						margin-right: 0.5em;
+						width: 100%;
+						margin-bottom: 0
+						height: 0
+					"
+				></div>
+				<p>OR</p>
+				<div
+					style="
+						color: gray;
+						border-style: inset;
+						border-width: 1px;
+						margin-left: 0.5em;
+						margin-right: 0.5em;
+						width: 100%;
+						margin-top: 0;
+						height: 0
+					"
+				></div>
+			</div>
+			<form
+				action="/app"
+				style="
+					margin-bottom: 0
+				"
+			>
+				<input
+		    	style="
+		    		height: 40px;
+		    		border-radius: 5px;
+		    		background-color: black;
+		    		box-shadow: 1px 1px rgba(0, 0, 0, 0.5) 2px 2px rgba(0, 0, 0, 0.7) ;
+		    		border-width: 0;
+		    		color: white;
+		    		width: 100%;
+		  		"
+					type="submit"
+					value="Capture From Camera"
+				/>
+			</form>
+		</div>
+		<div>
+			<p
+				style="
+				"
+			>@declan @larry-xpi @github</p>
+		</div>
+	</div>
+</body>
+</html>

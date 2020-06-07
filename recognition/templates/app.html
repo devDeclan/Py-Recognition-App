@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Py-Recognition</title>
+	<style type="text/css">
+		a {
+			color: white
+		}
+	</style>
+</head>
+<body
+	style="
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		background-color: black;
+		margin: 0;
+		padding: 0;
+		font-family: monospace;
+		color: white
+	"
+>
+  <div
+  	style="
+  		display: flex;
+  		width: 40%;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+  	"
+  >
+		<h2
+			style="
+				text-decoration-line: underline;
+			"
+		>Py-Recognition</h2>
+		<p>
+			End of semester project work by <a href="https://github.com/devDeclan">@declan</a> and <a href="https://github.com/devDeclan">@larry-xpi</a>
+		</p>
+		<p>
+			Some small description here. @larry-xpi will handle that
+		</p>
+		<p>
+			Source code for model training available <a href="https://github.com/devDeclan/Py-Recognition">here</a><br/>
+			Source code for this django app also available <a href="https://github.com/devDeclan/Py-Recognition-Frontend">here</a>
+		</p>
+  </div>
+  <div
+		style="
+			display: flex;
+			width: 60%;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		"
+  >
+		<div
+			style="
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-direction: column;
+				border-radius: 5px;
+				padding: 10px;
+				background-color: white;
+			"
+		>
+			<img
+				src="{% if video %} http://localhost:8000/video {% else %} http://localhost:8000/camera {% endif %}"
+				height="auto"
+				width="auto"
+				style="
+					border-radius: 5px
+				"
+			/>
+		</div>
+  </div>
+</body>
+</html>
